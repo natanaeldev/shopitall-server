@@ -1,22 +1,36 @@
-const products = require("../models/products");
+const {
+  products,
+  findAll,
+  findOne,
+  findByCategory,
+} = require("../models/product");
+const productData = require("../data/products");
 
-exports.getAllProducts = (req, res) => {
-  products.findAll().then((products) => res.json(products));
+exports.createProduct = async (req, res) => {
+  const product = new products(productData);
+
+  await product.save();
+  res.status(201).json("success");
 };
 
-exports.getSingleProduct = (req, res) => {
-  const productId = req.params.productId;
-
-  products
-    .findOne(productId)
-    .then((singleProducts) => res.json(singleProducts));
+exports.getAllProducts = async (req, res) => {
+  await findAll().then((response) => {
+    res.status(202).json(response);
+  });
 };
 
-exports.getProductByCategory = (req, res) => {
+exports.getAllProductsByCategory = async (req, res) => {
   const productCategory = req.params.category;
-  console.table(productCategory);
 
-  products
-    .findByCategory(productCategory)
-    .then((products) => res.json(products));
+  await findByCategory(productCategory).then((response) => {
+    res.status(200).json(response);
+  });
+};
+
+exports.getSingleProduct = async (req, res) => {
+  const productId = req.params.id;
+
+  await findOne(productId).then((response) => {
+    res.status(201).json(response);
+  });
 };
