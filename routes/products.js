@@ -1,14 +1,25 @@
-const router = require("express").Router();
-const {
-  createProduct,
-  getAllProducts,
-  getSingleProduct,
-  getAllProductsByCategory,
-} = require("../controllers/products");
+const express = require("express");
+const router = express.Router();
+const knex = require("../knexfile-config");
 
-router.get("/products", getAllProducts);
-router.get("/products/:id", getSingleProduct);
-router.post("/productscreate", createProduct);
-router.get("/products/category/:category", getAllProductsByCategory);
+router.get("/products", (req, res) => {
+  knex
+    .select()
+    .table("products")
+    .then((data) => {
+      res.status(200).json(data);
+    });
+});
+
+router.get("/products/:id", (req, res) => {
+  const id = req.params.id;
+  knex
+    .select()
+    .from("products")
+    .where({ id: id })
+    .then((data) => {
+      res.status(200).json(data);
+    });
+});
 
 module.exports = router;
