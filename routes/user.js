@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const knex = require("../knexfile-config");
@@ -11,7 +12,7 @@ router.post("/register", (req, res) => {
     return res.status(400).send("Please enter the required fields.");
   }
 
-  const hashedPassword = bcrypt.hashSync(password, 15);
+  const hashedPassword = bcrypt.hashSync(password, 10);
 
   const newUser = {
     firstname,
@@ -23,19 +24,21 @@ router.post("/register", (req, res) => {
 
   knex("user")
     .insert(newUser)
-    .then(() => {
+    .then((data) => {
       res.status(200).send("registered succesfully");
+      res.status(200).send(data);
     })
-    .catch(() => {
-      es.status(400).send("Failed registration");
+    .catch((error) => {
+      res.status(400).send("Failed registration");
     });
 });
 
-router.post("/login", (req, res) => {
+router.post("/users/login", (req, res) => {
   const { username, password } = req.body;
 
-  if ((!username, !password))
-    res.status(400).send("Please enter the required field ");
+  if (!username || !password) {
+    return res.status(400).send("Please enter the required field ");
+  }
 
   knex("user")
     .where({ username: username })
@@ -58,7 +61,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.get("/current", (req, res) => {
+router.get("/users/current", (req, res) => {
   if (!req.headers.authorization) {
     return res.status(401).send("Please login");
   }
@@ -70,7 +73,7 @@ router.get("/current", (req, res) => {
       return res.status(401).send("Invalid auth token");
     }
 
-    knex("users")
+    knex("user")
       .where({ username: decoded.username })
       .first()
       .then((user) => {

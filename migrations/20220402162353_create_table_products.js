@@ -5,7 +5,6 @@ exports.up = function (knex) {
       table.string("product_name").notNullable();
       table.string("image").notNullable();
       table.integer("price").notNullable();
-      table.string("size").notNullable();
       table.integer("quantity").defaultTo(0);
       table.string("description").notNullable();
       table.string("category").notNullable();

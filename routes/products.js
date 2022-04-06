@@ -22,4 +22,16 @@ router.get("/products/:id", (req, res) => {
     });
 });
 
+router.get("/products/category/:category", (req, res) => {
+  const category = req.params.category;
+
+  knex
+    .select()
+    .from("products")
+    .where({ category: category })
+    .then((data) => {
+      res.status(201).json(data);
+    });
+});
+
 module.exports = router;
