@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 module.exports = {
-  client: process.env.MYSQL_CLIENT,
+  client: "mysql",
   connection: {
     host: "127.0.0.1",
     user: "root",
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   Production: {
-    client: process.env.MYSQL_CLIENT,
+    client: "mysql",
     connection: process.env.JAWSDB_URL,
   },
 };
