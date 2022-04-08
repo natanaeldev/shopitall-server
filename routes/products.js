@@ -22,6 +22,26 @@ router.get("/products/:id", (req, res) => {
     });
 });
 
+// Review posting
+
+router.post("products/:id/reviews", (req, res) => {
+  const { reviews } = req.body;
+
+  if (!reviews) res.status(403).send("Please enter a review ");
+
+  const newReview = { reviews };
+
+  knex("reviews")
+    .insert(newReview)
+    .then((data) => {
+      res.status(200).send("reviews posted");
+      res.status(200).send(data);
+    })
+    .catch((error) => {
+      res.status(400).send("Failed registration");
+    });
+});
+
 router.get("/products/category/:category", (req, res) => {
   const category = req.params.category;
 
