@@ -32,7 +32,7 @@
   {
     "id": 3,
     "product_name": "White-T-shirt",
-    "image": "https://shopitall-server.herokuapp.com/images/Man/white-T-shirt.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/Man/White-T-shirt.jpg",
     "type": "T-shirt",
     "price": 40,
     "size": "L",
