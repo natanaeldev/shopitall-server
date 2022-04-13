@@ -15,7 +15,7 @@ router.post("/create-checkout-session", async (req, res) => {
     ],
     mode: "payment",
     success_url: `${PORT}?success=true`,
-    cancel_url: `${PORT}?canceled=true`,
+    cancel_url: `${PORT}?cansceled=true`,
   });
 
   res.redirect(303, session.url);
