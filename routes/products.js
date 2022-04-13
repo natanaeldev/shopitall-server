@@ -24,12 +24,13 @@ router.get("/products/:id", (req, res) => {
 
 router.get("/products/reviews/:id", (req, res) => {
   const review = "r.review";
+  const id = "r.id";
   const username = "r.username";
   const create_at = "r.create_at";
   const products_id = req.params.id;
 
   knex
-    .select({ review, username, create_at })
+    .select({ id, review, username, create_at })
     .table({ r: "reviews" })
     .join("products", "products.id", "=", "r.products_id")
     .where({ "r.products_id": products_id })
