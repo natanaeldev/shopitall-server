@@ -1,4 +1,4 @@
-const reviews = require("../seeds_data/reviews.json");
+const reviews = require("./reviews.json");
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex("reviews").del();
