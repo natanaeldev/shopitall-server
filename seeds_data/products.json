@@ -2,7 +2,7 @@
   {
     "id": 1,
     "product_name": "Brown Jacket",
-    "image": "http://localhost:8080/images/Man/brown-jacket.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/Man/brown-jacket.jpg",
     "type": "Jacket",
     "price": 20,
     "size": "S",
@@ -11,7 +11,7 @@
   },
   {
     "product_name": "Grey Jacket",
-    "image": "http://localhost:8080/images/Man/grey-jacket.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/Man/grey-jacket.jpg",
     "type": "Jacket",
     "price": 30,
     "size": "L",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "product_name": "hoodies",
-    "image": "http://localhost:8080/images/Man/hoodies.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/Man/hoodies.jpg",
     "type": "hoodies",
     "price": 10,
     "size": "M",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "product_name": "White-T-shirt",
-    "image": "http://localhost:8080/images/Man/white-T-shirt.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/Man/white-T-shirt.jpg",
     "type": "T-shirt",
     "price": 40,
     "size": "L",
@@ -43,7 +43,7 @@
   {
     "id": 4,
     "product_name": "black_T-shirt",
-    "image": "http://localhost:8080/images/woman/black_T-shirt.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/woman/black_T-shirt.jpg",
     "type": "T-shirt",
     "price": 40,
     "size": "L",
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "product_name": "pink_sneaker",
-    "image": "http://localhost:8080/images/sneakers/pink_sneaker.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/sneakers/pink_sneaker.jpg",
     "type": "sneaker",
     "price": 40,
     "size": "9 1/2",
@@ -65,7 +65,7 @@
   {
     "id": 6,
     "product_name": "convert-red.jpg",
-    "image": "http://localhost:8080/images/sneakers/convert-red.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/sneakers/convert-red.jpg",
     "type": "sneaker",
     "price": 40,
     "size": "L",
@@ -76,7 +76,7 @@
   {
     "id": 7,
     "product_name": "purple sneaker",
-    "image": "http://localhost:8080/images/sneakers/purple-sneaker.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/sneakers/purple-sneaker.jpg",
     "type": "sneaker",
     "price": 40,
     "size": "L",
@@ -87,7 +87,7 @@
   {
     "id": 8,
     "product_name": "nike AIR",
-    "image": "http://localhost:8080/images/sneakers/white-nike-air-white.jpg",
+    "image": "https://shopitall-server.herokuapp.com/images/sneakers/white-nike-air-white.jpg",
     "type": "sneaker",
     "price": 40,
     "size": "L",

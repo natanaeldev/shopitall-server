@@ -1,4 +1,4 @@
-const products_data = require("../seeds_data/products.json");
+const products_data = require("./products.json");
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex("products").del();
