@@ -4,7 +4,9 @@ exports.up = function (knex) {
       table.uuid("id").primary().defaultTo(knex.raw("(UUID())"));
       table.string("product_name").notNullable();
       table.string("image").notNullable();
+      table.string("type").notNullable();
       table.integer("price").notNullable();
+      table.string("size").notNullable();
       table.integer("quantity").defaultTo(0);
       table.string("description").notNullable();
       table.string("category").notNullable();
@@ -18,11 +20,8 @@ exports.up = function (knex) {
       table
         .uuid("products_id")
         .defaultTo(knex.raw("(UUID())"))
-        .notNullable()
         .references("id")
-        .inTable("products")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .inTable("products");
     });
 };
 

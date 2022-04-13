@@ -26,7 +26,6 @@ router.post("/register", (req, res) => {
     .insert(newUser)
     .then((data) => {
       res.status(200).send("registered succesfully");
-      res.status(200).send(data);
     })
     .catch((error) => {
       res.status(400).send("Failed registration");

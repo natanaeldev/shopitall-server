@@ -1,7 +1,9 @@
 [
   {
+    "id": 1,
     "product_name": "Brown Jacket",
     "image": "http://localhost:8080/images/Man/brown-jacket.jpg",
+    "type": "Jacket",
     "price": 20,
     "size": "S",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -10,14 +12,17 @@
   {
     "product_name": "Grey Jacket",
     "image": "http://localhost:8080/images/Man/grey-jacket.jpg",
+    "type": "Jacket",
     "price": 30,
     "size": "L",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "category": "man"
   },
   {
+    "id": 2,
     "product_name": "hoodies",
     "image": "http://localhost:8080/images/Man/hoodies.jpg",
+    "type": "hoodies",
     "price": 10,
     "size": "M",
     "quantity": 2,
@@ -25,8 +30,10 @@
     "category": "man"
   },
   {
+    "id": 3,
     "product_name": "White-T-shirt",
     "image": "http://localhost:8080/images/Man/white-T-shirt.jpg",
+    "type": "T-shirt",
     "price": 40,
     "size": "L",
     "quantity": 2,
@@ -34,8 +41,10 @@
     "category": "man"
   },
   {
+    "id": 4,
     "product_name": "black_T-shirt",
     "image": "http://localhost:8080/images/woman/black_T-shirt.jpg",
+    "type": "T-shirt",
     "price": 40,
     "size": "L",
     "quantity": 2,
@@ -43,8 +52,43 @@
     "category": "woman"
   },
   {
+    "id": 5,
     "product_name": "pink_sneaker",
     "image": "http://localhost:8080/images/sneakers/pink_sneaker.jpg",
+    "type": "sneaker",
+    "price": 40,
+    "size": "9 1/2",
+    "quantity": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "category": "sneaker"
+  },
+  {
+    "id": 6,
+    "product_name": "convert-red.jpg",
+    "image": "http://localhost:8080/images/sneakers/convert-red.jpg",
+    "type": "sneaker",
+    "price": 40,
+    "size": "L",
+    "quantity": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "category": "sneaker"
+  },
+  {
+    "id": 7,
+    "product_name": "purple sneaker",
+    "image": "http://localhost:8080/images/sneakers/purple-sneaker.jpg",
+    "type": "sneaker",
+    "price": 40,
+    "size": "L",
+    "quantity": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "category": "sneaker"
+  },
+  {
+    "id": 8,
+    "product_name": "nike AIR",
+    "image": "http://localhost:8080/images/sneakers/white-nike-air-white.jpg",
+    "type": "sneaker",
     "price": 40,
     "size": "L",
     "quantity": 2,
