@@ -45,7 +45,7 @@ router.post("/reviews/:id", (req, res) => {
   const { review, username } = req.body;
   const { id } = req.params;
 
-  if (!review) res.status(403).send("Please enter a review ");
+  if (!review) res.status(403).send("Please enter a review");
 
   const newReview = { username, review, products_id: id };
   console.log(newReview);
